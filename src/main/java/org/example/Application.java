@@ -1,8 +1,14 @@
 package org.example;
 
-public class Main {
-    public static void main(String[] args) {
+import org.example.Transaction.TransactionCrate;
 
+import java.sql.SQLException;
+
+public class Application {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+
+        String username = UserInfo.transferUser;
+        LogoutController.logoutKontrolEt(username);
         TransactionCrate.Crated();
 
     }

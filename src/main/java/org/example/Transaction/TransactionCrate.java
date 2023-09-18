@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Transaction;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -25,7 +25,7 @@ public class TransactionCrate {
 
 
         // Kaç transfer göndermek istediğinizi burada belirleyin
-        int numberOfTransfers = 15;
+        int numberOfTransfers = 1;
 
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
             for (int i = 0; i < numberOfTransfers; i++) {

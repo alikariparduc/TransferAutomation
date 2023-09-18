@@ -2,7 +2,7 @@ package org.example;
 
 import java.sql.*;
 
-public class LogoutControl {
+public class LogoutController {
     public static String connectionString = "";
 
     //DB Bilgileri
@@ -14,13 +14,15 @@ public class LogoutControl {
     public static String oraclePasswordForTransfer = "STORE123*";
     public static void logoutKontrolEt(String username) throws SQLException, ClassNotFoundException {
 
-        String environment = System.getProperty("ENVIRONMENT");
-        if(environment == null || environment.equals("release")) {
-            connectionString = releaseConnectionString;
-        }
-        else if(environment.equals("test")) {
+        //String environment = System.getProperty("ENVIRONMENT");
+        //if(environment == null || environment.equals("release")) {
+         //   connectionString = releaseConnectionString;
+       // }
+        //else if(environment.equals("test")) {
             connectionString = testConnectionString;
-        }
+        //}
+
+
 
         Class.forName ("oracle.jdbc.driver.OracleDriver");
         Connection con = DriverManager.getConnection(connectionString,
