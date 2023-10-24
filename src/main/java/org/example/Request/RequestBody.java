@@ -1,12 +1,18 @@
 package org.example.Request;
+import org.example.Methods.RandomIMEI;
+
+import java.util.UUID;
 
 public class RequestBody {
 
     public static String createTransactionRequest()
     {
+        String randomRequestId = UUID.randomUUID().toString(); // Rastgele requestId oluştur
+        //String randomIMEI = RandomIMEI.generateRandomIMEI();
+
        return "{\n" +
                 "    \"transferBase\": {\n" +
-                "        \"requestId\": \"1f378367-a2a0-424c-ab73-57f28a6e14e4\",\n" +
+                "        \"requestId\": \"11111111111\",\n" +
                 "        \"note\": \"\",\n" +
                 "        \"sourceStore\": {\n" +
                 "            \"storeCode\": \"S349900-01\",\n" +
@@ -25,12 +31,12 @@ public class RequestBody {
                 "    },\n" +
                 "    \"items\": [\n" +
                 "        {\n" +
-                "            \"name\": \"Apple 20 W USB-C Guc Adaptoru Beyaz Standart\",\n" +
+                "            \"name\": \"Samsung Galaxy S21 128GB Beyaz\",\n" +
                 "            \"sku\": \"SA00885\",\n" +
                 "            \"barcode\": \"8806092114388\",\n" +
                 "            \"offerType\": \"CAMPAIGN\",\n" +
                 "            \"requiredQuantity\": 1,\n" +
-                "            \"imei\": \"105747267732647\",\n" +
+                "            \"imei\": \"105698503895187\",\n" +
                 "            \"segmentName\": \"YNA&IOT\"\n" +
                 "        }\n" +
                 "    ]\n" +

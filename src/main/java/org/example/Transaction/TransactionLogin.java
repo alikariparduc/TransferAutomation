@@ -24,7 +24,7 @@ public class TransactionLogin {
             // HTTP POST isteği oluştur
             HttpPost httpPost = new HttpPost(url);
 
-            // JSON verisini ekleyin
+            // JSON verisini ekle
             StringEntity entity = new StringEntity(jsonBody);
             httpPost.setEntity(entity);
 
